@@ -16,6 +16,8 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: grid;
+  place-items: center;
 }
 
 h1,
@@ -238,7 +240,7 @@ input.search-form__checkbox:checked {
   font-size: 75px;
   line-height: 71px;
   text-transform: uppercase;
-  padding-bottom: 23px;
+  padding-bottom: 21px;
 }
 
 /* Свойство меняющее цвет первой стоки для заголовка */
@@ -268,7 +270,7 @@ input.search-form__checkbox:checked {
 }
 
 .content__list-item:not(:last-of-type) {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 }
 
 
