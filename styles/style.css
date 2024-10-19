@@ -45,14 +45,14 @@ ol {
   display: flex;
   justify-content: center;
   gap: 30px;
+  align-items: center;
   padding: 133px 30px;
 }
 
 /* Блок с результатами вывада по параметрам */
 
 .result {
-  min-width: 711px;
-  min-height: 456px;
+  max-width: 711px;
   padding-top: 78px;
 }
 
@@ -60,7 +60,7 @@ ol {
 
 .result__video-container {
   position: relative;
-  min-width: 100%;
+  max-width: 100%;
   max-height: 386px;
   
 }
@@ -69,10 +69,11 @@ ol {
 
 .result__video {
   min-width: 100%;
-  max-height: 386px;
+  max-height: 100%;
   object-fit: cover;
   
 }
+
 
 /* Блок параметров поиска */
 
@@ -110,7 +111,7 @@ ol {
 
 .search-form__fieldset-title {
   padding-bottom: 5px;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;  
@@ -124,7 +125,7 @@ ol {
   border-bottom: 1px solid rgb(255, 255, 255);
   outline: none;
   color: rgba(255, 255, 255, 0.7);
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -139,46 +140,6 @@ ol {
 
 }
 
-
-/*
-.search-form__pseudo-checkbox {
-  appearance: none;
-  position: relative;
-  width: 19px;
-  height: 19px;
-  border: 1px solid #FFFFFF;
-  transition: 500ms;
-  margin-top: 0.1em;
-  margin-right: 0.1em;
-}
-
-.search-form__checkbox {
-  appearance: none;
-  position: relative;
-  width: 19px;
-  height: 19px;
-  border: 1px solid #FFFFFF;
-  transition: 500ms;
-  margin: 0;
-  margin-top: 0.1em;
-}
-
-
-input.search-form__checkbox:checked {
-  appearance: none;
-  position: relative;
-  width: 19px;
-  height: 19px;
-  border: 1px solid #fff;
-  transition: 500ms;
-  background-size: 80%;
-  background-color: #fff;
-  margin: 0;
-  margin-top: 0.1em;
-}
-  */
-
-
 /* Кнопки */
 
 .button {
@@ -187,7 +148,7 @@ input.search-form__checkbox:checked {
   border: 1px solid #fff;
   color: #fff;
   color: #fff;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -210,14 +171,13 @@ input.search-form__checkbox:checked {
 
 .content__details {
   min-width: 399px;
-  max-height: 534px;
 }
 
 /* Заголовок страницы */
 
 .title {
-  padding-bottom: 21px;
-  font-family: 'Oswald';
+  padding-bottom: 22px;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -244,9 +204,6 @@ input.search-form__checkbox:checked {
 
 /* Внешний вид полосы прокрутки */
 
-.content__list:hover {
-  overflow-y: scroll;
-}
 
 .content__list::-webkit-scrollbar {
   width: 7px;
@@ -259,68 +216,53 @@ input.search-form__checkbox:checked {
 }
 
 .content__list-item:not(:last-of-type) {
-  margin-bottom: 23px;
+  margin-bottom: 30px;
 }
 
 /* Карточки с городами */
 
-.content__video-card-description-container {
-  padding: 3px 1px;
-  overflow: auto;
-}
-
-.content__video-card-description-container::-webkit-scrollbar {
-  display: none;
-}
-
 .content__video-card {
   display: grid;
-  grid-template-columns: 200px 2px 194px;
+  grid-template-columns: 200px 194px;
   min-height: 107px;
 }
 
 .content__video-card-thumbnail {
   min-width: 194px;
-  max-height: 103px;
+  height: 103px;
   padding-top: 4px;
   object-fit: cover;
-  /*object-position: 0 1.5px;
-  margin-left: 2px;*/
 }
 
 .content__video-card-title {
   color: #FFFFFF;
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   }
 
 .content__video-card-description {
   max-width: 100%;
-  max-height: 200px;
   padding-top: 5px;
   object-fit: cover;
-  overflow: auto;
   color: #FFFFFF;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: 16px;
-  text-wrap: wrap;
-}
-
-.content__video-card-description::-webkit-scrollbar {
-  display: none;
 }
 
 .content__card-link {
   display: block;
-  margin: 3px;
   text-decoration-line: none;
+  margin: 3px 3px 0 3px;
 }
 
 /* Настройки взаимодействия на сайте */
@@ -395,15 +337,20 @@ input[type=checkbox]:checked + .search-form__pseudo-checkbox::after {
 
 /* Активное состояние */
 
+.search-form__textfield:active {
+  border: none;
+}
+
 .content__card-link:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .button:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .content__card-link.content__card-link_current {
-  content: '';
   background-color: #545050;
 }
