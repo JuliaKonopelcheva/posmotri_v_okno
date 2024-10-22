@@ -158,7 +158,9 @@ ol {
 }
 
 .more-button {
-  min-width: 100%;
+  width: calc(100% - 4px);
+  box-sizing: border-box;
+  margin: 2px;
 }
 
 
@@ -171,7 +173,7 @@ ol {
 /* Блок  сзаголовком и видео */
 
 .content__details {
-  width: 399px;
+  width: 405px;
 }
 
 /* Заголовок страницы */
@@ -298,7 +300,7 @@ input[type=checkbox]:checked + .search-form__pseudo-checkbox::after {
   outline: none; 
 }
 
-.search-form__label:has(:focus-visible) {
+.search-form__label:has(:focus-visible:not(:active)) {
   outline: 1px solid rgb(255, 255, 255);
   outline-offset: 2px;
 }
@@ -318,7 +320,7 @@ input[type=checkbox]:checked + .search-form__pseudo-checkbox::after {
 
 .button:focus-visible {
   outline: 1px solid rgb(255, 255, 255);
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 /* Наведение курсора */
