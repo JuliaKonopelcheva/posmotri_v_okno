@@ -171,13 +171,13 @@ ol {
 /* Блок  сзаголовком и видео */
 
 .content__details {
-  min-width: 399px;
+  width: 399px;
 }
 
 /* Заголовок страницы */
 
 .title {
-  padding-bottom: 22px;
+  padding-bottom: 23px;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -201,6 +201,7 @@ ol {
   justify-content: space-between;
   height: 298px;
   overflow: auto;
+  object-fit: contain;
 }
 
 /* Внешний вид полосы прокрутки */
@@ -208,6 +209,7 @@ ol {
 
 .content__list::-webkit-scrollbar {
   width: 7px;
+  
 }
 
 .content__list::-webkit-scrollbar-thumb {
@@ -217,14 +219,14 @@ ol {
 }
 
 .content__list-item:not(:last-of-type) {
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 }
 
 /* Карточки с городами */
 
 .content__video-card {
   display: grid;
-  grid-template-columns: 195px 194px;
+  grid-template-columns: 200px 194px;
   min-height: 107px;
 }
 
